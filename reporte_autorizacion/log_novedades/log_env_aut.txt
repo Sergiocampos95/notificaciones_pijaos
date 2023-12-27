@@ -1,0 +1,62 @@
+- Mensaje enviado con exito!!! 07-21-2021 03:13:55 pm
+- Mensaje enviado con exito!!! 08-01-2021 05:50:17 am
+- Mensaje enviado con exito!!! 08-15-2021 05:50:21 am
+- Mensaje enviado con exito!!! 09-01-2021 05:50:20 am
+- Mensaje enviado con exito!!! 09-15-2021 05:50:20 am
+- Mensaje enviado con exito!!! 10-01-2021 05:50:23 am
+- Mensaje enviado con exito!!! 10-05-2021 04:49:32 pm
+- Mensaje enviado con exito!!! 10-15-2021 05:50:23 am
+- Mensaje enviado con exito!!! 11-01-2021 05:50:22 am
+- Mensaje enviado con exito!!! 11-15-2021 05:50:23 am
+- Mensaje enviado con exito!!! 12-01-2021 05:50:30 am
+- Mensaje enviado con exito!!! 12-15-2021 05:50:24 am
+- Mensaje enviado con exito!!! 01-01-2022 05:50:20 am
+- Mensaje enviado con exito!!! 01-15-2022 05:50:21 am
+- Mensaje enviado con exito!!! 02-01-2022 05:50:22 am
+- Mensaje enviado con exito!!! 02-15-2022 05:50:21 am
+- Mensaje enviado con exito!!! 03-01-2022 05:50:22 am
+- Mensaje enviado con exito!!! 05-15-2022 05:50:24 am
+- Mensaje enviado con exito!!! 06-01-2022 05:50:24 am
+- Mensaje enviado con exito!!! 06-15-2022 05:50:24 am
+- Mensaje enviado con exito!!! 07-01-2022 05:50:24 am
+- Mensaje enviado con exito!!! 07-15-2022 05:50:25 am
+- Mensaje enviado con exito!!! 08-01-2022 05:51:04 am
+- Mensaje enviado con exito!!! 08-15-2022 05:50:26 am
+- Mensaje enviado con exito!!! 09-01-2022 05:50:27 am
+- Mensaje enviado con exito!!! 09-15-2022 05:50:28 am
+- Mensaje enviado con exito!!! 10-01-2022 05:50:29 am
+- Mensaje enviado con exito!!! 10-15-2022 05:50:29 am
+- Error al enviar el mensaje: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting 11-01-2022 05:50:30 am
+- Mensaje enviado con exito!!! 11-15-2022 05:50:28 am
+- Mensaje enviado con exito!!! 11-24-2022 08:29:20 am
+- Error al enviar el mensaje: SMTP connect() failed. https://github.com/PHPMailer/PHPMailer/wiki/Troubleshooting 12-01-2022 05:50:31 am
+- Mensaje enviado con exito!!! 12-15-2022 05:50:31 am
+- Mensaje enviado con exito!!! 01-01-2023 05:50:33 am
+- Mensaje enviado con exito!!! 01-15-2023 05:50:35 am
+- Mensaje enviado con exito!!! 02-01-2023 05:50:32 am
+- Mensaje enviado con exito!!! 02-15-2023 05:50:32 am
+- Mensaje enviado con exito!!! 03-01-2023 05:50:33 am
+- Mensaje enviado con exito!!! 03-15-2023 05:50:33 am
+- Mensaje enviado con exito!!! 04-01-2023 05:50:33 am
+- Mensaje enviado con exito!!! 04-15-2023 05:50:34 am
+- Mensaje enviado con exito!!! 05-01-2023 05:50:33 am
+- Mensaje enviado con exito!!! 05-15-2023 05:50:35 am
+- Mensaje enviado con exito!!! 06-01-2023 05:50:34 am
+- Mensaje enviado con exito!!! 06-15-2023 05:50:35 am
+- Mensaje enviado con exito!!! 07-01-2023 05:50:38 am
+- Mensaje enviado con exito!!! 07-15-2023 05:50:37 am
+- Mensaje enviado con exito!!! 08-01-2023 05:50:38 am
+- Mensaje enviado con exito!!! 08-15-2023 05:50:48 am
+- Mensaje enviado con exito!!! 09-01-2023 05:50:47 am
+- Mensaje enviado con exito!!! 09-15-2023 05:50:50 am
+- Mensaje enviado con exito!!! 10-01-2023 05:50:51 am
+- Error al enviar el mensaje: SMTP Error: Could not authenticate. 10-15-2023 05:50:42 am
+- Error al enviar el mensaje: SMTP Error: Could not authenticate. 11-01-2023 05:50:35 am
+- Error al enviar el mensaje: SMTP Error: Could not authenticate. 11-15-2023 05:50:45 am
+- Mensaje enviado con exito!!! 12-01-2023 05:50:50 am
+- Mensaje enviado con exito!!! 12-05-2023 10:09:16 am
+- Mensaje enviado con exito!!! 12-05-2023 10:10:49 am
+- Mensaje enviado con exito!!! 12-14-2023 02:35:06 pm
+- Mensaje enviado con exito!!! 12-14-2023 02:37:58 pm
+- Mensaje enviado con exito!!! 12-14-2023 02:39:16 pm
+- Mensaje enviado con exito!!! 12-15-2023 05:50:53 am
