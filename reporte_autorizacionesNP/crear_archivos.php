@@ -31,6 +31,8 @@ if (!function_exists('generar_agrupado')) {
                 fwrite($file,
                         'NO_AUTORIZACION|' .
                         'NO_SOLICITUD|' .
+                        'TP_IDENT_AFILIA|' .
+                        'NR_IDENT_AFILIA|' .
                         'FECHA_AUTORIZACION|' .
                         'FECHA_VENCIMIENTO' .
                         PHP_EOL);
@@ -43,8 +45,10 @@ if (!function_exists('generar_agrupado')) {
                 $fechaAutorizacionFormateada = $fechaAutorizacion->format('Y-m-d');
                 $fechaAutorizacionVencimiento = $fechaVencimiento->format('Y-m-d');
                     fwrite($file,
-                            $final->NO_SOLICITUD . '|' .
                             $final->NO_AUTORIZACION . '|' .
+                            $final->NO_SOLICITUD . '|' .
+                            $final->TP_IDENT_AFILIA . '|' .
+                            $final->NR_IDENT_AFILIA . '|' .
                             $fechaAutorizacionFormateada . '|' .
                             $fechaAutorizacionVencimiento .
                             PHP_EOL);
@@ -65,6 +69,8 @@ if (!function_exists('generar_agrupado')) {
             fwrite($file,
                     'NO_AUTORIZACION|' .
                     'NO_SOLICITUD|' .
+                    'TP_IDENT_AFILIA|' .
+                    'NR_IDENT_AFILIA|' .
                     'FECHA_AUTORIZACION|' .
                     'FECHA_VENCIMIENTO' .
                     PHP_EOL);
@@ -77,8 +83,10 @@ if (!function_exists('generar_agrupado')) {
                 $fechaAutorizacionFormateada = $fechaAutorizacion->format('Y-m-d');
                 $fechaAutorizacionVencimiento = $fechaVencimiento->format('Y-m-d');
                 fwrite($file,
-                        $final->NO_SOLICITUD . '|' .
                         $final->NO_AUTORIZACION . '|' .
+                        $final->NO_SOLICITUD . '|' .
+                        $final->TP_IDENT_AFILIA . '|' .
+                        $final->NR_IDENT_AFILIA . '|' .
                         $fechaAutorizacionFormateada . '|' .
                         $fechaAutorizacionVencimiento .
                         PHP_EOL);
