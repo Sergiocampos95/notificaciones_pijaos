@@ -79,8 +79,10 @@ if (isset($_GET["disparador_envio"])) {
                         $fechaAutorizacionVencimiento = $fechaVencimiento->format('Y-m-d');
                         // Armo la tabla de autorizaciones
                         $tr = "<tr>"
-                                . "<td style='text-align: center'>" . $respuesta2->NO_SOLICITUD . "</td> "
                                 . "<td style='text-align: center'>" . $respuesta2->NO_AUTORIZACION . "</td> "
+                                . "<td style='text-align: center'>" . $respuesta2->NO_SOLICITUD . "</td> "
+                                . "<td style='text-align: center'>" . $respuesta2->TP_IDENT_AFILIA . "</td> "
+                                . "<td style='text-align: center'>" . $respuesta2->NR_IDENT_AFILIA . "</td> "
                                 . "<td style='text-align: center'>" . $fechaAutorizacionFormateada . "</td> "
                                 . "<td style='text-align: center'>" . $fechaAutorizacionVencimiento . "</td> "
                                 . "</tr>";
@@ -181,6 +183,8 @@ if (isset($_GET["disparador_envio"])) {
                             . " <tr> "
                             . "<th style='background-color: #e1edd7'>No Autorizacion</th> "
                             . "<th style='background-color: #e1edd7'>No solicitud</th> "
+                            . "<th style='background-color: #e1edd7'>Tipo de documento</th> "
+                            . "<th style='background-color: #e1edd7'>Numero de documento</th> "
                             . "<th style='background-color: #e1edd7'>Fecha autorizacion</th> "
                             . "<th style='background-color: #e1edd7'>Fecha vencimiento</th> "
                             . "</tr> "
@@ -234,9 +238,11 @@ if (isset($_GET["disparador_envio"])) {
             ################################################################################
             ################################################################################
             ###################### ENVIO DE CORREO CON PRESTORES SIN CORREO ################
-            //Create an instance; passing `true` enables exceptions
-            $mail = new PHPMailer(true);
-            try {
+            //si hay prestadores sin correo, ingresara a este bloque
+            if ($sum_correos > 0){
+                //Create an instance; passing `true` enables exceptions
+                $mail = new PHPMailer(true);
+                try {
                 //Server settings
                 $mail->SMTPDebug = 0;                                       //Enable verbose debug output
                 $mail->isSMTP();                                            //Send using SMTP
@@ -306,9 +312,13 @@ if (isset($_GET["disparador_envio"])) {
                 //agrega log de envio de correo
                 log_txt("Mensaje (consolidado prestadores) enviado con exito!!!");
 
-            } catch (Exception $e) {
-                //agragar log de error
-                log_txt("Error al enviar el mensaje (consolidado prestadores): {$mail->ErrorInfo}");
+                } catch (Exception $e) {
+                    //agragar log de error
+                    log_txt("Error al enviar el mensaje (consolidado prestadores): {$mail->ErrorInfo}");
+                }
+            }else{
+                //agrega log de envio de correo de prestadores sin correo
+                log_txt("No se encontraron prestadores sin correo");
             }
     } else {
         //agragar log de error
