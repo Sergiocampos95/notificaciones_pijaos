@@ -146,4 +146,20 @@ class ReporteAutorizacion {
 
         return ejecutarConsulta($sql);
     }
+
+    /**
+    *MROJAS 04/03/2024 – No.1474 Ticket - Metodo que obtiene la informacion las autorizaciones de oxigeno que se relacionan con los seguimientos.
+    **/
+    public function get_autorizaciones_seguimiento_oxigeno() {
+
+        $sql = "SELECT a.NO_SOLICITUD, a.NO_AUTORIZACION, a.FEC_AUTORIZA, a.FEC_VENCIMIENTO, COUNT(a.NO_SOLICITUD) AS TOTAL_REGISTROS "
+        . "FROM SEGUIMIENTO_OXIGENO so "
+        . "INNER JOIN AUTORIZACION a ON so.NO_SOLICITUD = a.NO_SOLICITUD "
+        . "WHERE "
+        . " EOMONTH(a.FEC_VENCIMIENTO) >= EOMONTH(DATEADD(MONTH, 2, CAST('01/02/2023' AS DATE))) "
+        . "AND EOMONTH(a.FEC_VENCIMIENTO) <= EOMONTH(DATEADD(MONTH, 2, CAST('01/02/2023' AS DATE))) "
+        . "GROUP BY  A.NO_SOLICITUD, NO_AUTORIZACION, FEC_AUTORIZA, FEC_VENCIMIENTO,FEC_AUTORIZACION ";
+
+        return ejecutarConsulta($sql);
+    }
 }
