@@ -45,6 +45,8 @@ if (!function_exists('generar_agrupado')) {
                     fwrite($file,
                             $final->NO_AUTORIZACION . '|' .
                             $final->NO_SOLICITUD . '|' .
+                            $final->NUM_DOCUMENTO_BEN . '|' .
+                            $final->PRI_APELLIDO . ' '.$final->SEG_APELLIDO. ' '.$final->PRI_NOMBRE. ' '.$final->NOM_NOMBRE. '|' .
                             $fechaAutorizacionFormateada . '|' .
                             $fechaAutorizacionVencimiento .
                             PHP_EOL);
@@ -79,6 +81,8 @@ if (!function_exists('generar_agrupado')) {
                 fwrite($file,
                         $final->NO_AUTORIZACION . '|' .
                         $final->NO_SOLICITUD . '|' .
+                        $final->NUM_DOCUMENTO_BEN . '|' .
+                        $final->PRI_APELLIDO . ' '.$final->SEG_APELLIDO. ' '.$final->PRI_NOMBRE. ' '.$final->NOM_NOMBRE. '|' .
                         $fechaAutorizacionFormateada . '|' .
                         $fechaAutorizacionVencimiento .
                         PHP_EOL);
