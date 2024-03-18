@@ -146,4 +146,38 @@ class ReporteAutorizacion {
 
         return ejecutarConsulta($sql);
     }
+
+    /**
+    *MROJAS 04/03/2024 – No.1474 Ticket - Metodo que obtiene la informacion las autorizaciones de oxigeno que se relacionan con los seguimientos.
+    **/
+    public function get_autorizaciones_seguimiento_oxigeno() {
+
+        $sql = "SELECT a.NO_SOLICITUD, a.NO_AUTORIZACION, a.FEC_AUTORIZA, afs.NUM_DOCUMENTO_BEN, afs.PRI_APELLIDO, afs.SEG_APELLIDO, afs.PRI_NOMBRE, afs.NOM_NOMBRE, a.FEC_VENCIMIENTO, COUNT(a.NO_SOLICITUD) AS TOTAL_REGISTROS "
+        . "FROM SEGUIMIENTO_OXIGENO so "
+        . "INNER JOIN AUTORIZACION a ON so.NO_SOLICITUD = a.NO_SOLICITUD "
+        . "INNER JOIN AFILIADOSSUB afs ON a.AUT_IDORDENITEM = afs.IDORDENITEM "
+        . "WHERE "
+        . " EOMONTH(a.FEC_VENCIMIENTO) >= EOMONTH(DATEADD(MONTH, 2,CAST(GETDATE() AS DATE))) "
+        . "AND EOMONTH(a.FEC_VENCIMIENTO) <= EOMONTH(DATEADD(MONTH, 2,CAST(GETDATE() AS DATE))) "
+        . "GROUP BY  A.NO_SOLICITUD, NO_AUTORIZACION, FEC_AUTORIZA, FEC_VENCIMIENTO,FEC_AUTORIZACION, afs.PRI_APELLIDO, afs.SEG_APELLIDO, afs.PRI_NOMBRE, afs.NOM_NOMBRE,afs.NUM_DOCUMENTO_BEN ";
+
+        return ejecutarConsulta($sql);
+    }
+
+    /**
+    *MROJAS 04/03/2024 – No.1474 Ticket - Metodo que obtiene la informacion las autorizaciones de oxigeno que se relacionan con los seguimientos vencidos.
+    **/
+    public function get_autorizaciones_seguimiento_oxigeno_vencido() {
+
+        $sql = "SELECT a.NO_SOLICITUD, a.NO_AUTORIZACION, a.FEC_AUTORIZA, afs.NUM_DOCUMENTO_BEN, afs.PRI_APELLIDO, afs.SEG_APELLIDO, afs.PRI_NOMBRE, afs.NOM_NOMBRE, a.FEC_VENCIMIENTO, COUNT(a.NO_SOLICITUD) AS TOTAL_REGISTROS "
+        . "FROM SEGUIMIENTO_OXIGENO so "
+        . "INNER JOIN AUTORIZACION a ON so.NO_SOLICITUD = a.NO_SOLICITUD "
+        . "INNER JOIN AFILIADOSSUB afs ON a.AUT_IDORDENITEM = afs.IDORDENITEM "
+        . "WHERE "
+        . "EOMONTH(a.FEC_VENCIMIENTO) <= EOMONTH( CAST(GETDATE() AS DATE))  "
+        . "AND so.estado <> 'CER' "
+        . "GROUP BY  A.NO_SOLICITUD, NO_AUTORIZACION, FEC_AUTORIZA, FEC_VENCIMIENTO,FEC_AUTORIZACION, afs.PRI_APELLIDO, afs.SEG_APELLIDO, afs.PRI_NOMBRE, afs.NOM_NOMBRE,afs.NUM_DOCUMENTO_BEN ";
+
+        return ejecutarConsulta($sql);
+    }
 }
